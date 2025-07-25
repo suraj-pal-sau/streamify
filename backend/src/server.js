@@ -1,5 +1,5 @@
 import express from "express"
-import dotenv from "dotenv"
+import "dotenv/config"
 
 const app = express()
 const PORT = process.env.PORT
@@ -14,5 +14,5 @@ app.get("/api/auth/logout", (req,res) => {
     res.send("logout page")
 })
 app.listen(PORT, ()=>{
-    console.log("port is listing on 5001")
+    console.log(`Server is listing on port ${PORT}`)
 })
